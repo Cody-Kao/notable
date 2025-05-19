@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  #root {
+    @apply h-full;
+
+    @apply rounded-lg;
+
+    @apply bg-black/50 backdrop-blur-3xl;
+  }
+
+  html,
+  body {
+    @apply h-full;
+
+    @apply select-none;
+
+    @apply bg-transparent;
+
+    @apply font-mono text-white antialiased;
+
+    @apply overflow-hidden;
+  }
+
+  .drag {
+    -webkit-app-region: drag;
+  }
+
+  button {
+    -webkit-app-region: no-drag;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-[#555];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  /* 覆蓋mdx原生的css style */
+  button[title='Column menu']:hover {
+    background-color: black !important;
+  }
+  button[title='Column menu'] svg {
+    color: #fff;
+  }
+  button[title='Row menu']:hover {
+    background-color: black !important;
+  }
+  button[title='Row menu'] svg {
+    color: #fff;
+  }
+}

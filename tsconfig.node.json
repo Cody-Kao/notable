@@ -1,0 +1,25 @@
+// for main
+{
+  // inherit compiler settings from a base configuration provided by @electron-toolkit
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  // This defines which files TypeScript should compile or check.
+  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*", "src/shared/**/*"],
+  "compilerOptions": {
+    // Enables project references — necessary if you're using multiple tsconfig.json files (like one for main, one for renderer).
+    "composite": true,
+    // include global type definitions from the electron-vite plugin.
+    "types": ["electron-vite/node"],
+    // This sets the root directory for module resolution. In your case, it's the project root.
+    "baseUrl": ".",
+    // This defines custom path aliases so you can import modules cleanly.
+    // @/utils/log.ts	==> src/main/utils/log.ts
+    "paths": {
+      "@/*":[
+        "src/main/*"
+      ],
+      "@shared/*":[
+        "src/shared/*"
+      ]
+    }
+  }
+}
