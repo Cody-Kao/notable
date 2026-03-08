@@ -1,6 +1,10 @@
-# electron-markdown
+# Notable
 
-An Electron application with React and TypeScript
+**An Electron note-taking app that fully supports MarkDown**
+
+---  
+[Demo Video](https://drive.google.com/file/d/1vdcTsnnxGJFgn_TL7zMyhPw82zwuj98v/view?usp=sharing)
+--- 
 
 ## Recommended IDE Setup
 
